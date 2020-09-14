@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+.text{
+    width: 60%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 2s;
+}
+.text::before{
+    content: 'Mouse Move';
+    color: white;
+    font-size: 0;
+    font-weight: 600;
+    animation: animate1 2s;
+}
+@keyframes animate{
+    0%{
+        font-size: 0rem
+    }
+    100%{
+        font-size: 3rem
+    }
+}
+@keyframes animate1{
+    0%{
+        font-size: 0rem
+    }
+    100%{
+        font-size: 5rem
+    }
+}
+.create{
+    width: 5rem;
+    height: 5rem;
+}
+span{
+    position: absolute;
+    pointer-events: none;
+    animation: generate 15s;
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+
+}
+@keyframes generate{
+    0%{
+        background: url(img/heart.png);
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        filter: hue-rotate(3000deg);
+        background-position: center;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -2000%);
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 62%;
+    }
+    .text::before{
+        content: 'Touch';
+    }
+    span{
+        animation: generate 10s;
+        width: 110%;
+        height: 110%;
+    }
+    @keyframes generate{
+        0%{
+            background: url(img/heart.png);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+            filter: hue-rotate(3000deg);
+            background-position: center;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(-50%, -3000%);
+        }
+    }
+}
+@media(max-width:600px){
+    html{
+        font-size: 52%;
+    }
+    @keyframes generate{
+        0%{
+            background: url(img/heart.png);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+            filter: hue-rotate(3000deg);
+            background-position: center;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(-50%, -3000%);
+        }
+    }
+}
+@media(max-width:420px){
+    html{
+        font-size: 35%;
+    }
+    @keyframes generate{
+        0%{
+            background: url(img/heart.png);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+            filter: hue-rotate(3000deg);
+            background-position: center;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(-50%, -3000%);
+        }
+    }
+}
+@media(max-width:360px){
+    html{
+        font-size: 30%;
+    }
+    @keyframes generate{
+        0%{
+            background: url(img/heart.png);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+            filter: hue-rotate(3000deg);
+            background-position: center;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(-50%, -3000%);
+        }
+    }
+}
+@media(max-width:280px){
+    html{
+        font-size: 25%;
+    }       
+    @keyframes generate{
+        0%{
+            background: url(img/heart.png);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+            filter: hue-rotate(3000deg);
+            background-position: center;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(-50%, -3000%);
+        }
+    }
+}
